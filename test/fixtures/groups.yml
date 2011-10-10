@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  synth_id: 1
+  audio_id: 1
+  synth_instance_id: 1
+
+two:
+  name: MyString
+  synth_id: 1
+  audio_id: 1
+  synth_instance_id: 1

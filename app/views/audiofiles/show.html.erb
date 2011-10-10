@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @audiofile.name %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @audiofile.url %>
+</p>
+
+
+<%= link_to 'Edit', edit_audiofile_path(@audiofile) %> |
+<%= link_to 'Back', audiofiles_path %>

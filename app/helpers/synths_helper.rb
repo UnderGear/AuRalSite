@@ -1,0 +1,2 @@
+module SynthsHelper
+end

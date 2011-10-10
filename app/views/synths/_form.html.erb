@@ -1,0 +1,33 @@
+<%= form_for(@synth) do |f| %>
+  <% if @synth.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@synth.errors.count, "error") %> prohibited this synth from being saved:</h2>
+
+      <ul>
+      <% @synth.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :parameters %><br />
+    <%= f.text_field :parameters %>
+  </div>
+  <div class="field">
+    <%= f.label :location_id %><br />
+    <%= f.text_field :location_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

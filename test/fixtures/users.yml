@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  ip: MyString
+  active: false
+  synth_id: 1
+  audio_id: 1
+  location_id: 1
+
+two:
+  name: MyString
+  ip: MyString
+  active: false
+  synth_id: 1
+  audio_id: 1
+  location_id: 1

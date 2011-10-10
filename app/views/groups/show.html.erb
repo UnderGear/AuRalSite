@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @group.name %>
+</p>
+
+<p>
+  <b>Synth:</b>
+  <%= @group.synth_id %>
+</p>
+
+<p>
+  <b>Audio:</b>
+  <%= @group.audio_id %>
+</p>
+
+<p>
+  <b>Synth instance:</b>
+  <%= @group.synth_instance_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_group_path(@group) %> |
+<%= link_to 'Back', groups_path %>

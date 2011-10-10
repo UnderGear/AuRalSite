@@ -1,0 +1,53 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :latitude %><br />
+    <%= f.text_field :latitude %>
+  </div>
+  <div class="field">
+    <%= f.label :longitude %><br />
+    <%= f.text_field :longitude %>
+  </div>
+  <div class="field">
+    <%= f.label :ip %><br />
+    <%= f.text_field :ip %>
+  </div>
+  <div class="field">
+    <%= f.label :active %><br />
+    <%= f.check_box :active %>
+  </div>
+  <div class="field">
+    <%= f.label :synth_id %><br />
+    <%= f.text_field :synth_id %>
+  </div>
+  <div class="field">
+    <%= f.label :audio_id %><br />
+    <%= f.text_field :audio_id %>
+  </div>
+  <div class="field">
+    <%= f.label :group_ids %><br />
+    <%= f.collection_select :group_ids, Group.all, :id, :name, {}, { :multiple => true, :selected => 'user[group_ids]', :name => 'user[group_ids][]' } %>
+  </div>
+  <div class="field">
+    <%= f.label :locationset_ids %><br />
+    <%= f.collection_select :locationset_ids, Locationset.all, :id, :name, {}, { :multiple => true, :selected => 'user[locationset_ids]', :name => 'user[locationset_ids][]' } %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,35 @@
+<h1>Listing users</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>IP</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
+    <th>Active</th>
+    <th>Synth</th>
+    <th>Audio</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.name %></td>
+    <td><%= user.ip %></td>
+    <td><%= user.latitude %></td>
+    <td><%= user.longitude %></td>
+    <td><%= user.active %></td>
+    <td><%= link_to user.synth_id, synth_path(user.synth_id) %></td>
+    <td><%= link_to user.audio_id, audiofile_path(user.audio_id) %></td>
+    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New User', new_user_path %>

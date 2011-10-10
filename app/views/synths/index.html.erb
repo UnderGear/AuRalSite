@@ -1,0 +1,29 @@
+<h1>Listing synths</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Url</th>
+    <th>Parameters</th>
+    <th>Location</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @synths.each do |synth| %>
+  <tr>
+    <td><%= synth.name %></td>
+    <td><%= synth.url %></td>
+    <td><%= synth.parameters %></td>
+    <td><%= synth.location_id %></td>
+    <td><%= link_to 'Show', synth %></td>
+    <td><%= link_to 'Edit', edit_synth_path(synth) %></td>
+    <td><%= link_to 'Destroy', synth, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Synth', new_synth_path %>

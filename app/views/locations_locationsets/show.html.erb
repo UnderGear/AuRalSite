@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Location:</b>
+  <%= @locations_locationset.location_id %>
+</p>
+
+<p>
+  <b>Locationset:</b>
+  <%= @locations_locationset.locationset_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_locations_locationset_path(@locations_locationset) %> |
+<%= link_to 'Back', locations_locationsets_path %>

@@ -1,0 +1,2 @@
+module SynthinstancesHelper
+end

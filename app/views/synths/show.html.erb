@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @synth.name %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @synth.url %>
+</p>
+
+<p>
+  <b>Parameters:</b>
+  <%= @synth.parameters %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @synth.location_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_synth_path(@synth) %> |
+<%= link_to 'Back', synths_path %>

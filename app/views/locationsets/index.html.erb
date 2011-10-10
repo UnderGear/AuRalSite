@@ -1,0 +1,23 @@
+<h1>Listing locationsets</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @locationsets.each do |locationset| %>
+  <tr>
+    <td><%= locationset.name %></td>
+    <td><%= link_to 'Show', locationset %></td>
+    <td><%= link_to 'Edit', edit_locationset_path(locationset) %></td>
+    <td><%= link_to 'Destroy', locationset, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Locationset', new_locationset_path %>

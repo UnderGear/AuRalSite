@@ -1,0 +1,17 @@
+<%= form_for(@locations_user) do |f| %>
+  <% if @locations_user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@locations_user.errors.count, "error") %> prohibited this locations_user from being saved:</h2>
+
+      <ul>
+      <% @locations_user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

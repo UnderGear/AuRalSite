@@ -1,0 +1,25 @@
+<%= form_for(@locations_locationset) do |f| %>
+  <% if @locations_locationset.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@locations_locationset.errors.count, "error") %> prohibited this locations_locationset from being saved:</h2>
+
+      <ul>
+      <% @locations_locationset.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :location_id %><br />
+    <%= f.text_field :location_id %>
+  </div>
+  <div class="field">
+    <%= f.label :locationset_id %><br />
+    <%= f.text_field :locationset_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

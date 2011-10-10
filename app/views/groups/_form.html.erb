@@ -1,0 +1,41 @@
+<%= form_for(@group) do |f| %>
+  <% if @group.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@group.errors.count, "error") %> prohibited this group from being saved:</h2>
+
+      <ul>
+      <% @group.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :synth_id %><br />
+    <%= f.text_field :synth_id %>
+  </div>
+  <div class="field">
+    <%= f.label :audio_id %><br />
+    <%= f.text_field :audio_id %>
+  </div>
+  <div class="field">
+    <%= f.label :synth_instance_id %><br />
+    <%= f.text_field :synth_instance_id %>
+  </div>
+  <div class="field">
+    <%= f.label :location_ids %><br />
+    <%= f.collection_select :location_ids, Location.all, :id, :name, {}, { :multiple => true, :selected => 'group[location_ids]', :name => 'group[location_ids][]' } %>
+  </div>
+  <div class="field">
+    <%= f.label :user_ids %><br />
+    <%= f.collection_select :user_ids, User.all, :id, :name, {}, { :multiple => true, :selected => 'group[user_ids]', :name => 'group[user_ids][]' } %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

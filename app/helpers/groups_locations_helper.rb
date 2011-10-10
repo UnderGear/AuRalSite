@@ -1,0 +1,2 @@
+module GroupsLocationsHelper
+end
