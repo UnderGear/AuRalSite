@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>::AuRal::</title>
+		<link rel="stylesheet" href="/nexusUI/nexus.css" />
+		<!-- standard includes of all of the nexusUI javascripts-->
+	  <script src="/nexusUI/prototype.js" type="text/javascript"></script>
+		<script src="/nexusUI/jquery-1.7.2.min.js" type="text/javascript"></script>
+		<script src="/nexusUI/nexusUI.js" type="text/javascript"></script>
+		<script src="/nexusUI/nexusButton.js?" type="text/javascript"></script>
+		<script src="/nexusUI/nexusDial.js" type="text/javascript"></script>
+		<script src="/nexusUI/nexusSplineSlider.js" type="text/javascript"></script>
+		<script src="/nexusUI/nexusPositionArray.js" type="text/javascript"></script>
+		<script src="/nexusUI/nexusMultiSlider.js" type="text/javascript"></script>
+		
+		<!-- Make mobile display non scalable and fitting the viewport window -->
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no">
+
+	<script type="text/javascript" charset="utf-8">
+					// Setup all of the UI objects you want to use.
+					// This occurs after the page has loaded all of the canvas objects to draw into.
+		aural_user_id = 1;
+		
+		function set_aural_user_id (user_id) {
+			aural_user_id = user_id;
+			splineSlider_1.user_id = aural_user_id;
+			splineSlider_2.user_id = aural_user_id;
+			splineSlider_3.user_id = aural_user_id;
+		}
+		
+		function nexusInit(){
+			
+			splineSlider_1 = new splineSlider("splineSlider1", "/users/device_update_params", 1);
+			splineSlider_2 = new splineSlider("splineSlider2", "/users/device_update_params", 2);
+			splineSlider_3 = new splineSlider("splineSlider3", "/users/device_update_params", 3);
+			
+			aural_user_id = window.aural_send.get_id();
+			splineSlider_1.user_id = aural_user_id;
+			splineSlider_2.user_id = aural_user_id;
+			splineSlider_3.user_id = aural_user_id;
+			
+			
+		}
+		
+				// Tell Safari not to move the window.
+		function blockMove(event) {
+			event.preventDefault();
+		} 
+		
+	</script>
+</head>
+<body ontouchmove="blockMove(event);" onLoad="nexusInit()">
+			<!-- Layout all of the UI Elements as Canvas Objects. -->
+	<div id="ui">
+		<div id="title">AuRal Default View</div>
+		<canvas id="splineSlider1" width="80px" height="320px">splineSlider</canvas> &nbsp;&nbsp;
+		<canvas id="splineSlider2" width="80px" height="320px">splineSlider</canvas> &nbsp;&nbsp;
+		<canvas id="splineSlider3" width="80px" height="320px">splineSlider</canvas> 
+	</div>
+</body>	
+

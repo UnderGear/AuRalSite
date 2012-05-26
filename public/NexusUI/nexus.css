@@ -1,0 +1,177 @@
+
+body {
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	color: #888;
+	margin: 0px;
+	padding: 0px;
+	top: 0px;
+	display: block;
+}
+div#title {
+	font-size: 1.5em;
+	color: #888;
+	font-weight: bold;
+	text-align: center;
+	margin: 10px;
+}
+
+@media only screen and (max-width: 999px) {
+  /* rules that only apply for canvases narrower than 1000px */
+	body {
+		width:device-width;
+		margin:0px 0px; padding:0px;
+		text-align:center;
+		background-color:#000;
+		}
+
+	div#title {
+		font-size: 1.5em;
+		color: #888;
+		font-weight: bold;
+		text-align: center;
+		margin: 10px;
+	}
+	
+	#ui {
+		-webkit-user-select: none;
+		width: device-width;
+		height: device-height;
+		color: #333;
+		margin: 0px;
+		padding: 0px;
+		display: block;
+		position: fixed;
+		top: 0px;
+		text-align: center;
+	}
+}
+
+@media only screen and (device-width: 768px) and (orientation: landscape) {
+  /* rules for iPad in landscape orientation */
+	body {
+		width:device-width;
+		margin: 0px; padding:0px;
+		text-align:center;
+		background-color:#000;
+		}
+
+	div#title {
+		font-size: 1.5em;
+		color: #888;
+		font-weight: bold;
+		text-align: center;
+		margin: 10px;
+	}
+
+	#ui {
+		-webkit-user-select: none;
+		width: device-width;
+		height: device-height;
+		color: #333;
+		margin: 0px;
+		padding: 0px;
+		display: block;
+		position: fixed;
+		top: 0px;
+		text-align: center;
+	}
+}
+
+@media only screen and (min-device-width: 471px) and (max-device-width: 520px) and (orientation: portrait) {
+  /* iPhone, Android Landscape rules here */
+	body {
+		width:device-width;
+		margin: 0px; padding:0px;
+		text-align:center;
+		background-color:#000;
+		}
+
+	div#title {
+		font-size: 1.5em;
+		color: #888;
+		font-weight: bold;
+		text-align: center;
+		margin: 10px;
+	}
+
+	#ui {
+		-webkit-user-select: none;
+		width: device-width;
+		height: device-height;
+		color: #333;
+		margin: 0px;
+		padding: 0px;
+		display: block;
+		position: fixed;
+		top: 0px;
+		text-align: center;
+	}
+}
+
+@media only screen and (min-device-width: 471px) and (max-device-width: 520px) and (orientation: landscape) {
+  /* iPhone, Android Landscape rules here */
+	body {
+		width:device-width;
+		margin: 0px; padding:0px;
+		text-align:center;
+		background-color:#000;
+		}
+
+	div#title {
+		font-size: 1.5em;
+		color: #888;
+		font-weight: bold;
+		text-align: center;
+		margin: 10px;
+	}
+
+	#ui {
+		-webkit-user-select: none;
+		width: device-width;
+		height: device-height;
+		color: #333;
+		margin: 0px;
+		padding: 0px;
+		display: block;
+		position: fixed;
+		top: 0px;
+		text-align: center;
+	}
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 470px) {
+  /* iPhone, Android rules here */
+	body {
+		width:device-width;
+		margin: 0px; padding:0px;
+		text-align:center;
+		background-color:#000;
+		}
+
+	div#title {
+		font-size: 1.5em;
+		color: #888;
+		font-weight: bold;
+		text-align: center;
+		margin: 10px;
+	}
+
+	#ui {
+		-webkit-user-select: none;
+		width: device-width;
+		height: device-height;
+		color: #333;
+		margin: 0px;
+		padding: 0px;
+		display: block;
+		position: fixed;
+		top: 0px;
+		text-align: center;
+	}
+	
+}
+
+canvas#splineSlider {
+}

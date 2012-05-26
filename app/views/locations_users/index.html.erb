@@ -9,9 +9,8 @@
 
 <% @locations_users.each do |locations_user| %>
   <tr>
-    <td><%= link_to 'Show', locations_user %></td>
-    <td><%= link_to 'Edit', edit_locations_user_path(locations_user) %></td>
-    <td><%= link_to 'Destroy', locations_user, :confirm => 'Are you sure?', :method => :delete %></td>
+			<td>			<%= locations_user.user_id %></td>
+			<td> <%= locations_user.location_id %></td>
   </tr>
 <% end %>
 </table>

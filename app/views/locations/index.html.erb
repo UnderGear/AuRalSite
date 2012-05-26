@@ -5,9 +5,9 @@
     <th>Name</th>
     <th>Latitude</th>
     <th>Longitude</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Param 1</th>
+    <th>Param 2</th>
+    <th>Param 3</th>
   </tr>
 
 <% @locations.each do |location| %>
@@ -15,6 +15,9 @@
     <td><%= location.name %></td>
     <td><%= location.latitude %></td>
     <td><%= location.longitude %></td>
+		<td><%= location.param_1 %></td>
+		<td><%= location.param_2 %></td>
+		<td><%= location.param_3 %></td>
     <td><%= link_to 'Show', location %></td>
     <td><%= link_to 'Edit', edit_location_path(location) %></td>
     <td><%= link_to 'Destroy', location, :confirm => 'Are you sure?', :method => :delete %></td>

@@ -123,9 +123,15 @@ class UsersController < ApplicationController
 
   def device_update_params
     @param = Userparam.find_by_user_id(params[:id])
-    @param.value_1 = params[:param_1]
-    @param.value_2 = params[:param_2]
-    @param.value_3 = params[:param_3]
+    if (params[:param_1] != nil)
+      @param.value_1 = params[:param_1]
+    end
+    if (params[:param_2] != nil)
+      @param.value_2 = params[:param_2]
+    end
+    if (params[:param_3] != nil)
+      @param.value_3 = params[:param_3]
+    end
     @param.save
     Location.aggregate_params(User.find(params[:id]))
     respond_to do |format|
